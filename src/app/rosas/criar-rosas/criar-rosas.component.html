@@ -1,0 +1,18 @@
+<mat-card class="card-cadastro">
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaCriada.nome" placeholder="Digite o nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaCriada.tipo" placeholder="Digite o tipo">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaCriada.cor" placeholder="Digite a cor">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="criacao()">{{nomeBotao}}</button>
+    </mat-card-actions>
+  </mat-card>
+  

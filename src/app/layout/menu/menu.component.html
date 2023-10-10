@@ -1,0 +1,9 @@
+<div class="menu">
+  <button color="sucesso" mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="['cadastrousuario']" mat-menu-item routerLinkActive="active">Cadastrar usuário</button>
+    <button [routerLink]="['listagemusuarios']" mat-menu-item routerLinkActive="active">Listar Usuários</button>
+    <button [routerLink]="['cadastrorosas']" mat-menu-item routerLinkActive="active">Cadastrar Rosas</button>
+    <button [routerLink]="['listagemrosas']" mat-menu-item routerLinkActive="active">Listar Rosas</button>
+  </mat-menu>
+</div>

@@ -1,0 +1,40 @@
+<div fxLayout="row wrap" fxLayout.lt-sm="column">
+    <mat-card fxFlex="20" class="card-rosa" *ngFor="let rosa of rosas">
+      <mat-card-header>
+        <mat-card-title>{{ rosa.nome }}</mat-card-title>
+        <mat-card-subtitle>Tipo: {{ rosa.tipo }} - Cor: {{ rosa.cor }}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-actions>
+        <button style="color: white;" mat-button (click)="iniciarEdicao(rosa)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="excluir(rosa)">
+          <mat-icon style="color: white;">delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  
+<!-- Campos de edição -->
+<mat-card fxFlex="20" class="card-rosa" *ngIf="rosaEmEdicao">
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaEmEdicao.nome" placeholder="Nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaEmEdicao.tipo" placeholder="Tipo">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="rosaEmEdicao.cor" placeholder="Cor">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="salvarEdicao()">Salvar Edição</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  
+  
+  
+  
